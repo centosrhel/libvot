@@ -52,6 +52,7 @@ endif(NOT CMAKE_BUILD_TYPE)
 
 # ================= Configure libvot dependencies =========================
 if(LIBVOT_USE_OPENCV)
+	set(OpenCV_DIR "/opt/opencv-3.4.5/share/OpenCV")
     find_package( OpenCV REQUIRED )
     if (OpenCV_FOUND)
         include_directories(${OpenCV_INCLUDE_DIRS})
